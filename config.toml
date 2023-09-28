@@ -1,0 +1,26 @@
+theme = "void"
+
+[editor]
+line-number = "relative"
+gutters = ["diagnostics", "spacer", "line-numbers", "spacer", "diff"]
+rulers = [120]
+bufferline = "always"
+cursorline = true
+cursorcolumn = true
+
+[editor.cursor-shape]
+insert = "bar"
+
+[editor.file-picker]
+hidden = false
+
+[editor.whitespace]
+render = "all"
+
+[editor.indent-guides]
+render = true
+character = "╎" # Some characters that work well: "▏", "┆", "┊", "⸽"
+
+[editor.lsp]
+display-inlay-hints = true
+display-messages = true

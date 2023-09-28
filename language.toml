@@ -1,0 +1,24 @@
+[[languages]]
+name = "go"
+auto-format = true
+formatter = { command = "goimports" }
+
+[[language]]
+name = "latex"
+
+# If this doesn't work, you might be on a older release version which handles this differently.
+# Try using [language.config.texlab.build] instead of [language-server.texlab.config.texlab.build]
+[language-server.texlab.config.texlab.build]
+onSave = true
+
+[[language]]
+name = "rust"
+
+# If this doesn't work, you might be on a older release version which handles this differently.
+# Try using [language.config.check] instead of [language-server.rust-analyzer.config.check]
+[language-server.rust-analyzer.config.check]
+command = "clippy"
+
+[[language]]
+name = "toml"
+formatter = { command = "taplo", args = ["fmt", "-"] }
