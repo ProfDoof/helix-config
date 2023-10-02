@@ -1,3 +1,20 @@
+[language-server]
+
+[[language]]
+name = "fsharp"
+scope = "source.fs"
+roots = ["sln", "fsproj"]
+injection-regex = "fsharp"
+file-types = ["fs", "fsx"]
+comment-token = "//"
+indent = { tab-width = 4, unit = "    " }
+auto-format = true
+language-server = { command = "fsautocomplete", config = { AutomaticWorkspaceInit = true } }
+
+[[grammar]]
+name = "fsharp"
+source = { git = "https://github.com/kaashyapan/tree-sitter-fsharp", rev = "18da392fd9bd5e79f357abcce13f61f3a15e3951" }
+
 [[languages]]
 name = "go"
 auto-format = true

@@ -1,17 +1,18 @@
 inherits = "doom_acario_dark"
+
 # UI Color Definitions
 "ui.background" = { fg = "beta_centaurii", bg = "void" }
 "ui.background.separator" = { fg = "beta_centaurii" }
 "ui.cursor" = { bg = "centaurii", modifier = ["slow_blink"]}
 "ui.cursor.match" = { fg = "centaurii", underline = {style = "line"} }
-"ui.cursor.primary" = { bg = "light_void"}
+"ui.cursor.primary" = { bg = "twilight"}
 "ui.debug.breakpoint" = { fg = "betelgeuse" }
 "ui.debug.active" = { fg = "sun" }
 "ui.gutter" = { bg = "beta_centaurii"}
 "ui.gutter.selected" = { fg = "sirius_b", bg = "sirius_b" }
 "ui.linenr" = { fg = "sirius" }
 "ui.linenr.selected" = { fg = "sirius", bg = "sirius_b" }
-"ui.statusline" = { fg = "sirius", bg = "light_void" }
+"ui.statusline" = { fg = "sirius", bg = "twilight" }
 "ui.statusline.inactive" = { fg = "void", bg = "unfocused" }
 "ui.statusline.separator" = { fg = "sirius" }
 "ui.popup" = { bg = "deep_blue", fg = "white" }
@@ -26,11 +27,11 @@ inherits = "doom_acario_dark"
 "ui.virtual.whitespace" = { fg = "dull_sirius" }
 "ui.virtual.indent-guide" = { fg = "dull_sirius" }
 "ui.virtual.inlay-hint" = { fg = "dull_sirius" }
-"ui.virtual.inlay-hint.parameter" = { fg = "dull_sirius" }
-"ui.virtual.inlay-hint.type" = { fg = "dull_sirius" }
+"ui.virtual.inlay-hint.parameter" = { fg = "light_sirius_b", bg = "black" }
+"ui.virtual.inlay-hint.type" = { fg = "light_sirius_b", bg = "black" }
 "ui.virtual.wrap" = { fg = "dull_sirius" }
 "ui.menu" = { fg = "sirius", bg = "dull_void"}
-"ui.menu.selected" = { fg = "sirius", bg = "light_void" }
+"ui.menu.selected" = { fg = "sirius", bg = "twilight" }
 "ui.menu.scroll" = { fg = "betelgeuse", bg = "sun" }
 "ui.selection" = { bg = "deep_sirius_b"}
 "ui.selection.primary" = { bg = "sirius_b"}
@@ -42,18 +43,18 @@ inherits = "doom_acario_dark"
 "warning" = { fg = "sun" }
 "error" = { fg = "betelgeuse" }
 "info" = { fg = "sirius_b" }
-"hint" = { fg = "hackermode" }
+"hint" = { fg = "hacker" }
 "diagnostic" = { underline = { color = "cygni", style = "curl" } }
 "diagnostic.warning" = { underline = { color = "sun", style = "curl" } }
 "diagnostic.error" = { underline = { color = "betelgeuse", style = "curl" } }
 "diagnostic.info" = { underline = { color = "sirius_b", style = "curl" } }
-"diagnostic.hint" = { underline = { color = "hackermode", style = "curl" } }
+"diagnostic.hint" = { underline = { color = "hacker", style = "curl" } }
 
 
 ## Need to be refined after the rest of the theme has been refined
-"ui.statusline.normal" = { fg = "sirius", bg = "light_void" }
-"ui.statusline.insert" = { fg = "sirius", bg = "light_void" }
-"ui.statusline.select" = { fg = "sirius", bg = "light_void" }
+"ui.statusline.normal" = { fg = "sirius", bg = "twilight" }
+"ui.statusline.insert" = { fg = "sirius", bg = "twilight" }
+"ui.statusline.select" = { fg = "sirius", bg = "twilight" }
 
 # Tree Sitter Styling
 "attribute" = { fg = "sun" }
@@ -62,12 +63,12 @@ inherits = "doom_acario_dark"
 "type.enum" = { fg = "cygni" }
 "type.enum.variant" = { fg = "sun" }
 "constructor" = { fg = "cygni" }
-"constant" = { fg = "sirius_b_light" }
-"constant.builtin" = { fg = "sirius_b_light" }
-"constant.builtin.boolean" = { fg = "sirius_b_light" }
+"constant" = { fg = "light_sirius_b" }
+"constant.builtin" = { fg = "light_sirius_b" }
+"constant.builtin.boolean" = { fg = "light_sirius_b" }
 "constant.character" = { fg = "centaurii" }
 "constant.character.escape" = { fg = "sirius" }
-"constant.numeric" = { fg = "sirius_b_light" }
+"constant.numeric" = { fg = "light_sirius_b" }
 # "constant.numeric.integer" = { fg = "sirius" }
 # "constant.numeric.float" = { fg = "sirius" }
 "string" = { fg = "centaurii" }
@@ -79,18 +80,18 @@ inherits = "doom_acario_dark"
 "string.regexp" = { fg = "betelgeuse" }
 "string.special" = { fg = "betelgeuse" }
 # "string.special.path" = { fg = "sirius" }
-"string.special.url" = { fg = "hackermode" }
+"string.special.url" = { fg = "hacker" }
 # "string.special.symbol" = { fg = "sirius" }
-"comment" = { fg = "dull_sirius" }
-"comment.line" = { fg = "dull_sirius" }
-"comment.block" = { fg = "dull_sirius" }
-"comment.block.documentation" = { fg = "dull_hackermode" }
-"variable" = { fg = "sirius" }
-"variable.builtin" = { fg = "sirius" }
-"variable.parameter" = { fg = "sirius" }
-"variable.other" = { fg = "sirius" }
-"variable.other.member" = { fg = "sirius" }
-"label" = { fg = "sirius" }
+"comment" = { fg = "dull_hacker" }
+"comment.line" = { fg = "dull_hacker" }
+"comment.block" = { fg = "dull_hacker" }
+"comment.block.documentation" = { fg = "light_centaurii" }
+"variable" = { fg = "sun" }
+"variable.builtin" = { fg = "cygni" }
+"variable.parameter" = { fg = "sun" }
+"variable.other" = { fg = "cygni" }
+"variable.other.member" = { fg = "sun" }
+"label" = { fg = "betelgeuse" }
 "punctuation" = { fg = "sirius" }
 "punctuation.delimiter" = { fg = "sirius" }
 "punctuation.bracket" = { fg = "sirius" }
@@ -162,20 +163,22 @@ inherits = "doom_acario_dark"
 black = "#000000"
 white = "#ffffff"
 void = "#0f0321"
-light_void = "#530ca5"
+twilight = "#530ca5"
 sun = "#f5f226"
 betelgeuse = "#eb391c"
 sirius_b = "#2d49ff"
-sirius_b_light = "#6075ff"
+light_sirius_b = "#6075ff"
 deep_sirius_b = "#162480"
 centaurii = "#b26aff"
 sirius = "#b5f8fe"
 cygni = "#ff985d"
-hackermode = "#34ab1b"
-dull_hackermode = "#19530d"
+hacker = "#34ab1b"
+dull_hacker = "#268014"
 beta_centaurii = "#2c1376"
 unfocused = "#5e5e5e"
 deep_blue = "#12083d"
 dull_sirius = "#455e61"
 dull_void = "#1a1521"
 trick = "#b817a9"
+light_centaurii = "#c37fc0"
+dull_twilight = "#2f1f42"
