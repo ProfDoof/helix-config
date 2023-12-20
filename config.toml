@@ -7,6 +7,8 @@ rulers = [120]
 bufferline = "always"
 cursorline = true
 cursorcolumn = true
+terminal.command = "tilix"
+terminal.args = ["-e"]
 
 [editor.cursor-shape]
 insert = "bar"

@@ -25,17 +25,51 @@ name = "latex"
 
 # If this doesn't work, you might be on a older release version which handles this differently.
 # Try using [language.config.texlab.build] instead of [language-server.texlab.config.texlab.build]
-[language-server.texlab.config.texlab.build]
+[language.config.texlab.build]
 onSave = true
 
 [[language]]
 name = "rust"
 
+[language.debugger]
+command = "codelldb"
+name = "codelldb"
+port-arg = "--port {}"
+transport = "tcp"
+
+[[language.debugger.templates]]
+name = "binary"
+request = "launch"
+
+[[language.debugger.templates.completion]]
+completion = "filename"
+name = "binary"
+
+[language.debugger.templates.args]
+program = "{0}"
+runInTerminal = true
+
 # If this doesn't work, you might be on a older release version which handles this differently.
 # Try using [language.config.check] instead of [language-server.rust-analyzer.config.check]
-[language-server.rust-analyzer.config.check]
+[language.config.check]
 command = "clippy"
+
+[language.config.cargo]
+autoreload = true
 
 [[language]]
 name = "toml"
 formatter = { command = "taplo", args = ["fmt", "-"] }
+
+[[language]]
+name = "python"
+scope = "source.python"
+injection-regex = "python"
+file-types = ["py","pyi","py3","pyw","ptl",".pythonstartup",".pythonrc","SConstruct"]
+shebangs = ["python"]
+roots = ["setup.py", "setup.cfg", "pyproject.toml"]
+comment-token = "#"
+language-server = { command = "pyright-langserver", args = ["--stdio"] }
+indent = { tab-width = 4, unit = "    " }
+# will get "Async jobs timed out" errors if this empty config is not added
+config = {}
