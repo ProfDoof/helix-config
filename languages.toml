@@ -2,6 +2,9 @@
 command = "fsautocomplete"
 config = { AutomaticWorkspaceInit = true }
 
+[language-server.fsharp-lsp.config]
+AutomaticWorkspaceInit = true
+
 [language-server.texlab.config.texlab.build]
 onSave = true
 
@@ -78,3 +81,9 @@ args = ["--ignore", "E501"]
 [language.formatter]
 command = "black"
 args = ["--line-length", "88", "--quiet", "-"]
+
+[[language]]
+name = "haskell"
+auto-format = true
+indent = { unit = "  ", tab-width=2 }
+

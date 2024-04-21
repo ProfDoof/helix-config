@@ -14,7 +14,8 @@ terminal.args = ["-e"]
 insert = "bar"
 
 [editor.file-picker]
-hidden = false
+hidden = true
+git-ignore = true
 
 [editor.whitespace]
 render = "all"
