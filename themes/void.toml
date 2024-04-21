@@ -1,5 +1,3 @@
-inherits = "doom_acario_dark"
-
 # UI Color Definitions
 "ui.background" = { fg = "beta_centaurii", bg = "void" }
 "ui.background.separator" = { fg = "beta_centaurii" }

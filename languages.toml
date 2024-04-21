@@ -1,4 +1,13 @@
-[language-server]
+[language-server.fsharp-lsp]
+command = "fsautocomplete"
+config = { AutomaticWorkspaceInit = true }
+
+[language-server.texlab.config.texlab.build]
+onSave = true
+
+[language-server.texlab.config.texlab.inlayHints]
+labelDefinitions = true
+labelReferences = true
 
 [[language]]
 name = "fsharp"
@@ -9,24 +18,16 @@ file-types = ["fs", "fsx"]
 comment-token = "//"
 indent = { tab-width = 4, unit = "    " }
 auto-format = true
-language-server = { command = "fsautocomplete", config = { AutomaticWorkspaceInit = true } }
+language-servers = [ "fsharp-lsp" ]
 
 [[grammar]]
 name = "fsharp"
 source = { git = "https://github.com/kaashyapan/tree-sitter-fsharp", rev = "18da392fd9bd5e79f357abcce13f61f3a15e3951" }
 
-[[languages]]
+[[language]]
 name = "go"
 auto-format = true
 formatter = { command = "goimports" }
-
-[[language]]
-name = "latex"
-
-# If this doesn't work, you might be on a older release version which handles this differently.
-# Try using [language.config.texlab.build] instead of [language-server.texlab.config.texlab.build]
-[language.config.texlab.build]
-onSave = true
 
 [[language]]
 name = "rust"
@@ -51,10 +52,10 @@ runInTerminal = true
 
 # If this doesn't work, you might be on a older release version which handles this differently.
 # Try using [language.config.check] instead of [language-server.rust-analyzer.config.check]
-[language.config.check]
+[language-server.rust-analyzer.config.check]
 command = "clippy"
 
-[language.config.cargo]
+[language-server.rust-analyzer.config.cargo]
 autoreload = true
 
 [[language]]
@@ -63,13 +64,17 @@ formatter = { command = "taplo", args = ["fmt", "-"] }
 
 [[language]]
 name = "python"
-scope = "source.python"
-injection-regex = "python"
-file-types = ["py","pyi","py3","pyw","ptl",".pythonstartup",".pythonrc","SConstruct"]
-shebangs = ["python"]
-roots = ["setup.py", "setup.cfg", "pyproject.toml"]
-comment-token = "#"
-language-server = { command = "pyright-langserver", args = ["--stdio"] }
-indent = { tab-width = 4, unit = "    " }
-# will get "Async jobs timed out" errors if this empty config is not added
-config = {}
+language-servers = [ "pyright", "ruff" ]
+
+[language-server.pyright.config.python.analysis]
+typeCheckingMode = "strict"
+
+[language-server.ruff]
+command = "ruff-lsp"
+
+[language-server.ruff.config.settings]
+args = ["--ignore", "E501"]
+
+[language.formatter]
+command = "black"
+args = ["--line-length", "88", "--quiet", "-"]
