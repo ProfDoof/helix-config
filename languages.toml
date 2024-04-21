@@ -1,6 +1,5 @@
 [language-server.fsharp-lsp]
 command = "fsautocomplete"
-config = { AutomaticWorkspaceInit = true }
 
 [language-server.fsharp-lsp.config]
 AutomaticWorkspaceInit = true
